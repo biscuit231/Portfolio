@@ -6,11 +6,20 @@
     'Lucida Sans', Arial, sans-serif;
 }
 
-body {
-  background-color: whitesmoke;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
 }
 
-.bucket-app {
+body {
+  background-color: whitesmoke !important;
+  color: black !important;
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.app {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -40,11 +49,11 @@ h3 {
   opacity: 0.4;
 }
 
-.bucket-form {
+.form {
   margin-bottom: 32px;
 }
 
-.bucket-input {
+.input {
   padding: 14px 32px 14px 16px;
   border-radius: 4px;
   border: 2px solid #5d0cff;
@@ -54,11 +63,11 @@ h3 {
   color: #fff;
 }
 
-.bucket-input::placeholder {
+.input::placeholder {
   color: #e2e2e2;
 }
 
-.bucket-button {
+.button {
   padding: 16px;
   border: none;
   border-radius: 4px;
@@ -69,11 +78,11 @@ h3 {
   text-transform: capitalize;
 }
 
-.bucket-input.edit {
+.input.edit {
   border: 2px solid #149fff;
 }
 
-.bucket-button.edit {
+.button.edit {
   background: linear-gradient(
     90deg,
     rgba(20, 159, 255, 1) 0%,
@@ -82,13 +91,13 @@ h3 {
   padding: 16px 22px;
 }
 
-.bucket-container {
+.container {
   display: flex;
   flex-direction: row;
   position: relative;
 }
 
-.bucket-row {
+.row {
   display: flex;
   justify-content: space-between;
   align-items: center;
