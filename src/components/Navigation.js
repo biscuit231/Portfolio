@@ -7,6 +7,7 @@ import linkedin from "../assets/img/icons8-linkedin-circled-50.png";
 export const NavBar = (props) => {
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
+  const { currentTab, setCurrentTab } = props;
 	
 	useEffect(() => {
 		const onScroll = () => {
@@ -23,7 +24,7 @@ export const NavBar = (props) => {
 
 	const onUpdateActiveLink = (value) => {
 		setActiveLink(value);
-    console.log(props);
+    console.log(currentTab);
 	}
 
   return (
@@ -37,8 +38,10 @@ export const NavBar = (props) => {
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-            <Nav.Link href="#portfolio" className={activeLink === 'portfolio' ? 'active navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('portfolio')}>Portfolio</Nav.Link>
+            <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link': 'navbar-link'} 
+            onClick={() => {onUpdateActiveLink('home'); setCurrentTab('about')}}>Home</Nav.Link>
+            <Nav.Link href="#portfolio" className={activeLink === 'portfolio' ? 'active navbar-link': 'navbar-link'} 
+            onClick={() => {onUpdateActiveLink('portfolio'); setCurrentTab('portfolio')}}>Portfolio</Nav.Link>
             <Nav.Link href="https://drive.google.com/file/d/1WUXm5xok64CXN4Zd2e7mTmLApVYmzgA4/view?usp=share_link" target="_blank" className={activeLink === 'resume' ? 'active navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('resume')}>Resume</Nav.Link>
           </Nav>
           <span className='navbar-text'>
@@ -46,7 +49,8 @@ export const NavBar = (props) => {
                 <a href="https://www.linkedin.com/in/jesse-barnett-b264b4263/"><img src={linkedin} alt="linkedin" id='linkedin'/></a>
                 <a href="https://github.com/biscuit231"><img src={github} alt="github" id='github'/></a>
             </div>
-            <button href="#contact" className={activeLink === 'contact' ? 'active navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('contact')}>
+            <button href="#contact" className={activeLink === 'contact' ? 'active navbar-link': 'navbar-link'} 
+            onClick={() => {onUpdateActiveLink('contact'); setCurrentTab('contact')}}>
                 <span>Contact Me</span>
             </button>
           </span>

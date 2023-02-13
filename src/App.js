@@ -11,7 +11,7 @@ import { Header } from './components/Header';
 function App() {
   const [currentTab, setCurrentTab] = useState("about");
 
-	const renderTab = (props) => {
+	const renderTab = () => {
 		switch (currentTab) {
 			case "about":
 				return <About />;
