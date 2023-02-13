@@ -22,7 +22,7 @@
 
   ## Usage 
 
-  Depolyed application:
+  Depolyed application: https://biscuit231.github.io/Portfolio/       
 
   ![Screenshot of live site.](./src/assets/img/Screenshot%202023-02-13%2020-13-31.png)
 
