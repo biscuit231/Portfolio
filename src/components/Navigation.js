@@ -42,7 +42,7 @@ export const NavBar = (props) => {
             onClick={() => {onUpdateActiveLink('home'); setCurrentTab('about')}}>Home</Nav.Link>
             <Nav.Link href="#portfolio" className={activeLink === 'portfolio' ? 'active navbar-link': 'navbar-link'} 
             onClick={() => {onUpdateActiveLink('portfolio'); setCurrentTab('portfolio')}}>Portfolio</Nav.Link>
-            <Nav.Link href="https://drive.google.com/file/d/1WUXm5xok64CXN4Zd2e7mTmLApVYmzgA4/view?usp=share_link" target="_blank" className={activeLink === 'resume' ? 'active navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('resume')}>Resume</Nav.Link>
+            <Nav.Link href="https://docs.google.com/document/d/1eU2G2TVJ-KVwrfBu9TUK7izpsh4Dd9IQamRGBvdnhTM/edit#heading=h.jl50kwavsrpr" target="_blank" className={activeLink === 'resume' ? 'active navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('resume')}>Resume</Nav.Link>
           </Nav>
           <span className='navbar-text'>
             <div className='social-icon'>
