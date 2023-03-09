@@ -6,7 +6,7 @@ import screenshot1 from "../assets/img/Circle.png";
 import screenshot2 from "../assets/img/Social.png";
 import screenshot3 from "../assets/img/Pickapup.png";
 import screenshot4 from "../assets/img/notetaker.png";
-import screenshot5 from "../assets/img/weather.png";
+import screenshot5 from "../assets/img/platemate.png";
 import screenshot6 from "../assets/img/texteditor.png";
 
 
@@ -34,8 +34,8 @@ export const Portfolio = () => {
             imgUrl: screenshot4,
         },
         {
-            title: 'Weather Dashboard',
-            githubLink: (<a href="https://github.com/biscuit231/Weather-Dashboard"><img src={githubIcon} alt="github5" id='github'/></a>),
+            title: 'Plate Mate',
+            githubLink: (<a href="https://github.com/biscuit231/Platemate"><img src={githubIcon} alt="github5" id='github'/></a>),
             imgUrl: screenshot5,
         },
         {
